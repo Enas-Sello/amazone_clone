@@ -20,7 +20,7 @@ const addressRoute = require("./Routes/addressRoute")
 //server
 const express = require("express")
 const app = express()
-const { API_PORT } = process.env
+const { PORT } = process.env
 const port = process.env.PORT || 3333
 app.use(express.urlencoded({ extended: true }))
 app.use(cors())
