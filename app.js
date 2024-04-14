@@ -39,7 +39,7 @@ app.use((req, res, next) => {
     express.json()(req, res, next) // ONLY do express.json() if the received request is NOT a WebHook from Stripe.
   }
 })
-app.use("/content", express.static("public"))
+app.use(express.static("public"))
 
 app.use("/payment", paymentRoute)
 app.use("/product", productRoute)
